@@ -38,7 +38,7 @@ subtitle                 : # site tagline that appears below site title in masth
 name                     : "Ramneet Singh"
 description              : "Ramneet Singh's blog. I write about computer science and programming."
 url                      : "https://ramneet-singh.github.io"# the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : "/maverick-chronicles"# the subpath of your site, e.g. "/blog"
+baseurl                  : "/maverick-chronicles/"# the subpath of your site, e.g. "/blog"
 repository               : "Ramneet-Singh/maverick-chronicles"# GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : "/assets/images/icon.png"# path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
