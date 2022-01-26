@@ -121,7 +121,7 @@ analytics:
 # Site Author
 author:
   name             : "Ramneet Singh"
-  avatar           : "assets/images/avatar.jpeg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "assets/images/avatar2.jpeg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I'm a Junior Undergraduate at IIT Delhi, studying Computer Science and Engineering. My interests include programming languages, machine learning and on the non-technical side, sports."
   location         : "New Delhi"
   email            :
@@ -295,3 +295,12 @@ defaults:
       comments: # true
       share: true
       related: true
+
+defaults:
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
