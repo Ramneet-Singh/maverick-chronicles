@@ -122,7 +122,7 @@ analytics:
 author:
   name             : "Ramneet Singh"
   avatar           : "assets/images/avatar2.jpeg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I'm a Junior Undergraduate at IIT Delhi, studying Computer Science and Engineering. My interests include programming languages, machine learning and on the non-technical side, sports."
+  bio              : "I enjoy learning and writing about computer science and software engineering."
   location         : "New Delhi"
   email            :
   links:
@@ -135,12 +135,6 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/Ramneet-Singh"
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:ramneet2001@gmail.com"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      url: "https://www.facebook.com/profile.php?id=100010470312496"
 
 # Site Footer
 footer:
