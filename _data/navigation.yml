@@ -1,0 +1,10 @@
+main:
+  - title: "Homepage"
+    url: "https://ramneet-singh.netlify.app"
+    description: "Personal Website"
+  - title: "About"
+    url: /about/
+    description: "About this blog"
+  - title: "CV"
+    url: /cv/
+    description: "Curriculum Vitae"
