@@ -5,6 +5,12 @@ tag: notes
 category: notes
 excerpt: "These are my notes on program synthesis, written while following [Prof. Solar-Lezama's notes](https://people.csail.mit.edu/asolar/SynthesisCourse/index.htm) on the same topic. I try to summarise the key ideas for each lecture."
 toc: true
+layout: single
+author_profile: true
+read_time: true
+comments: # true
+share: true
+related: true
 ---
 
 These are my notes on program synthesis, written while following [Prof. Solar-Lezama's notes](https://people.csail.mit.edu/asolar/SynthesisCourse/index.htm) on the same topic. I should mention two things at the outset - first, the content will be similar to those notes (indeed my intention is to summarise key ideas for each lecture) and second, like any other summary, this write-up will not be nearly detailed enough to understand program synthesis well.
