@@ -112,16 +112,16 @@ social:
 
 # Analytics
 analytics:
-  provider               : false # false (default), "google", "google-universal", "google-gtag", "custom"
+  provider               : "google" # false (default), "google", "google-universal", "google-gtag", "custom"
   google:
-    tracking_id          :
+    tracking_id          : 'G-FL07S352WE'
     anonymize_ip         : # true, false (default)
 
 
 # Site Author
 author:
   name             : "Ramneet Singh"
-  avatar           : "assets/images/avatar2.jpeg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "assets/images/avatar3.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I enjoy learning and writing about computer science and software engineering."
   location         : "New Delhi"
   email            :
