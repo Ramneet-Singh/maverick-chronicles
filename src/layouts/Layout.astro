@@ -1,6 +1,6 @@
 ---
 import { ClientRouter } from "astro:transitions";
-import { PUBLIC_GOOGLE_SITE_VERIFICATION } from "astro:env/client";
+import { PUBLIC_GOOGLE_SITE_VERIFICATION, PUBLIC_GOOGLE_ANALYTICS_ID } from "astro:env/client";
 import { SITE } from "@/config";
 import "@/styles/global.css";
 
@@ -56,7 +56,10 @@ const structuredData = {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="canonical" href={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
 
@@ -125,6 +128,27 @@ const structuredData = {
           name="google-site-verification"
           content={PUBLIC_GOOGLE_SITE_VERIFICATION}
         />
+      )
+    }
+
+    {
+      // If PUBLIC_GOOGLE_ANALYTICS_ID is set in the environment variable,
+      // include Google Analytics tracking script
+      PUBLIC_GOOGLE_ANALYTICS_ID && (
+        <>
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${PUBLIC_GOOGLE_ANALYTICS_ID}`}
+          ></script>
+          <script is:inline define:vars={{ PUBLIC_GOOGLE_ANALYTICS_ID }}>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+              dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+            gtag("config", PUBLIC_GOOGLE_ANALYTICS_ID);
+          </script>
+        </>
       )
     }
 

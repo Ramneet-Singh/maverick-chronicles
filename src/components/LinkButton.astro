@@ -6,6 +6,7 @@ export interface Props {
   ariaLabel?: string;
   title?: string;
   disabled?: boolean;
+  newTab?: boolean;
 }
 
 const {
@@ -15,6 +16,7 @@ const {
   ariaLabel,
   title,
   disabled = false,
+  newTab = true,
 } = Astro.props;
 ---
 
@@ -29,14 +31,30 @@ const {
       <slot />
     </span>
   ) : (
-    <a
-      id={id}
-      {href}
-      class:list={["group inline-block hover:text-accent", className]}
-      aria-label={ariaLabel}
-      title={title}
-    >
-      <slot />
-    </a>
+    newTab ? (
+      <a
+        id={id}
+        {href}
+        class:list={["group inline-block hover:text-accent", className]}
+        aria-label={ariaLabel}
+        title={title}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <slot />
+      </a>
+
+    ) :
+    (
+      <a
+        id={id}
+        {href}
+        class:list={["group inline-block hover:text-accent", className]}
+        aria-label={ariaLabel}
+        title={title}
+      >
+        <slot />
+      </a>
+    )
   )
 }
