@@ -1,5 +1,6 @@
 export const SITE = {
   website: "https://ramneet-singh.github.io/maverick-chronicles/", // replace this with your deployed domain
+  base: "/maverick-chronicles/",
   author: "Ramneet Singh",
   profile: "https://ramneet-singh.netlify.app/",
   desc: "I write about things that interest me. For now, this includes computer science, music and food.",

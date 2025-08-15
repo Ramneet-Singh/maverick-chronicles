@@ -69,7 +69,7 @@ In this section, you will find instructions on how to add support for LaTeX in y
 
    <!doctype html>
    <!-- others... -->
-   <script is:inline src="/toggle-theme.js"></script>
+   <script is:inline src={`${import.meta.env.BASE_URL}/toggle-theme.js`}></script>
 
    <!-- [!code highlight:4] -->
    <link

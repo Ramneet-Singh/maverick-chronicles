@@ -202,7 +202,7 @@ You can use relative path or alias path (`@/assets/`) to serve these images.
 Example: Suppose you want to display `example.jpg` whose path is `/src/assets/images/example.jpg`.
 
 ```md
-![something](@/assets/images/example.jpg)
+![something](./assets/images/example.jpg)
 
 <!-- OR -->
 
@@ -224,11 +224,11 @@ For these images, you should use an absolute path; and these images can be displ
 Example: Assume `example.jpg` is located at `/public/assets/images/example.jpg`.
 
 ```md
-![something](/assets/images/example.jpg)
+![something](./assets/images/example.jpg)
 
 <!-- OR -->
 
-<img src="/assets/images/example.jpg" alt="something">
+<img src="./assets/images/example.jpg" alt="something">
 ```
 
 ## Bonus

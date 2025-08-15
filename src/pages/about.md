@@ -7,7 +7,7 @@ Hi, I'm Ramneet.
 
 <figure>
   <img
-    src="/blog-photo.jpg"
+    src="./blog-photo.jpg"
     alt="Ramneet standing in front of the Golden Gate Bridge wearing a blue t-shirt and a black jacket."
     class="w-1/2 h-auto rounded-lg mx-auto"
   />
