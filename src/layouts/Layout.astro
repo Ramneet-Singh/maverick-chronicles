@@ -1,8 +1,12 @@
 ---
 import { ClientRouter } from "astro:transitions";
-import { PUBLIC_GOOGLE_SITE_VERIFICATION, PUBLIC_GOOGLE_ANALYTICS_ID } from "astro:env/client";
+import {
+  PUBLIC_GOOGLE_SITE_VERIFICATION,
+  PUBLIC_GOOGLE_ANALYTICS_ID,
+} from "astro:env/client";
 import { SITE } from "@/config";
 import "@/styles/global.css";
+import "katex/dist/katex.min.css";
 
 export interface Props {
   title?: string;
@@ -29,6 +33,12 @@ const {
 } = Astro.props;
 
 const socialImageURL = new URL(ogImage, Astro.url);
+const googleAnalyticsInitScript = PUBLIC_GOOGLE_ANALYTICS_ID
+  ? `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(Array.from(arguments));}
+gtag("js", new Date());
+gtag("config", ${JSON.stringify(PUBLIC_GOOGLE_ANALYTICS_ID)});`
+  : "";
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -57,10 +67,27 @@ const structuredData = {
     <meta charset="UTF-8" />
     <base href={import.meta.env.BASE_URL} />
     <meta name="viewport" content="width=device-width" />
-    <link rel="apple-touch-icon" sizes="180x180" href={import.meta.env.BASE_URL + "/apple-touch-icon.png"}>
-    <link rel="icon" type="image/png" sizes="32x32" href={import.meta.env.BASE_URL + "/favicon-32x32.png"}>
-    <link rel="icon" type="image/png" sizes="16x16" href={import.meta.env.BASE_URL + "/favicon-16x16.png"}>
-    <link rel="manifest" href={import.meta.env.BASE_URL + "/site.webmanifest"}>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href={import.meta.env.BASE_URL + "/apple-touch-icon.png"}
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href={import.meta.env.BASE_URL + "/favicon-32x32.png"}
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href={import.meta.env.BASE_URL + "/favicon-16x16.png"}
+    />
+    <link
+      rel="manifest"
+      href={import.meta.env.BASE_URL + "/site.webmanifest"}
+    />
     <link rel="canonical" href={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
 
@@ -69,7 +96,10 @@ const structuredData = {
     <meta name="title" content={title} />
     <meta name="description" content={description} />
     <meta name="author" content={author} />
-    <link rel="sitemap" href={import.meta.env.BASE_URL + "/sitemap-index.xml"} />
+    <link
+      rel="sitemap"
+      href={import.meta.env.BASE_URL + "/sitemap-index.xml"}
+    />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content={title} />
@@ -138,24 +168,19 @@ const structuredData = {
       PUBLIC_GOOGLE_ANALYTICS_ID && (
         <>
           <script
+            is:inline
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${PUBLIC_GOOGLE_ANALYTICS_ID}`}
-          ></script>
-          <script is:inline define:vars={{ PUBLIC_GOOGLE_ANALYTICS_ID }}>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-              dataLayer.push(arguments);
-            }
-            gtag("js", new Date());
-            gtag("config", PUBLIC_GOOGLE_ANALYTICS_ID);
-          </script>
+          />
+          <script is:inline set:html={googleAnalyticsInitScript} />
         </>
       )
     }
 
     <ClientRouter />
 
-    <script is:inline src={`${import.meta.env.BASE_URL}/toggle-theme.js`}></script>
+    <script is:inline src={`${import.meta.env.BASE_URL}/toggle-theme.js`}
+    ></script>
   </head>
   <body>
     <slot />

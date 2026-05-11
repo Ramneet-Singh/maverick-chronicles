@@ -3,6 +3,8 @@ import { SITE } from "@/config";
 import loadGoogleFonts from "../loadGoogleFont";
 
 export default async () => {
+  const fonts = await loadGoogleFonts();
+
   return satori(
     {
       type: "div",
@@ -122,7 +124,7 @@ export default async () => {
       width: 1200,
       height: 630,
       embedFont: true,
-      fonts: await loadGoogleFonts(SITE.title + SITE.desc + SITE.website),
+      ...(fonts.length > 0 ? { fonts } : {}),
     }
   );
 };

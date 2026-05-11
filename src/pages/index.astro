@@ -24,7 +24,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
   <Header />
   <main id="main-content" data-layout="index">
     <section id="hero" class="pt-8 pb-6">
-      <div class="flex items-center gap-3 mt-4 mb-2 sm:mt-8 sm:mb-3">
+      <div class="mt-4 mb-2 flex items-center gap-3 sm:mt-8 sm:mb-3">
         <h1 class="inline-block text-4xl font-bold sm:text-5xl">
           ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ
         </h1>
@@ -43,47 +43,59 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
           <span class="sr-only">RSS Feed</span>
         </a>
       </div>
-      
+
       <!-- Definition Toggle Button -->
       <div class="mb-4">
-        <button 
-          id="greeting-toggle" 
-          class="text-xs text-gray-600 dark:text-gray-400 hover:text-accent transition-colors duration-200 flex items-center gap-1"
+        <button
+          id="greeting-toggle"
+          class="flex items-center gap-1 text-xs text-gray-600 transition-colors duration-200 hover:text-accent dark:text-gray-400"
           aria-expanded="false"
           aria-controls="greeting-definition"
         >
           <span>What does this mean?</span>
-          <span id="toggle-arrow" class="transition-transform duration-200">▼</span>
+          <span id="toggle-arrow" class="transition-transform duration-200"
+            >▼</span
+          >
         </button>
-        
+
         <!-- Expandable Definition -->
-        <div 
-          id="greeting-definition" 
-          class="hidden mt-2 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 text-sm"
+        <div
+          id="greeting-definition"
+          class="mt-2 hidden rounded-lg border border-gray-200 bg-gray-50 p-3 text-sm dark:border-gray-700 dark:bg-gray-800"
         >
           <div class="space-y-2">
             <div>
-              <span class="font-semibold text-gray-900 dark:text-gray-100">Sat Sri Akal</span>
-              <span class="text-gray-600 dark:text-gray-400 ml-2">pronounced [sət sɾiː əkɑːl]</span>
+              <span class="font-semibold text-gray-900 dark:text-gray-100"
+                >Sat Sri Akal</span
+              >
+              <span class="ml-2 text-gray-600 dark:text-gray-400"
+                >pronounced [sət sɾiː əkɑːl]</span
+              >
             </div>
             <div class="text-gray-700 dark:text-gray-300">
-              <div>Traditional Sikh greeting that means "Truth is the Timeless One".</div>
+              <div>
+                Traditional Sikh greeting that means "Truth is the Timeless
+                One".
+              </div>
             </div>
           </div>
         </div>
       </div>
 
       <p>
-        I am Ramneet, a Research Fellow at 
+        I am Ramneet, a Research Fellow at
         <LinkButton
           class="underline decoration-dashed underline-offset-4 hover:text-accent"
           href="https://www.microsoft.com/en-us/research/lab/microsoft-research-india/"
         >
-        Microsoft Research India
-        </LinkButton>. I love learning about programming languages theory, compiler design, and machine learning. I also love sports, music and food. This is my personal corner of the internet where I write about all these (and more). Enjoy :)
+          Microsoft Research India
+        </LinkButton>. I love learning about programming languages theory,
+        compiler design, and machine learning. I also love sports, music and
+        food. This is my personal corner of the internet where I write about all
+        these (and more). Enjoy :)
       </p>
       <p class="mt-2">
-        You can visit 
+        You can visit
         <LinkButton
           class="underline decoration-dashed underline-offset-4 hover:text-accent"
           href="https://ramneet-singh.netlify.app/"
@@ -160,7 +172,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
     if (toggleButton && definition && arrow) {
       toggleButton.addEventListener("click", () => {
         const isHidden = definition.classList.contains("hidden");
-        
+
         if (isHidden) {
           // Show definition
           definition.classList.remove("hidden");

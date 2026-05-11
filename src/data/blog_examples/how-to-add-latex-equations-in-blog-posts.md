@@ -69,7 +69,8 @@ In this section, you will find instructions on how to add support for LaTeX in y
 
    <!doctype html>
    <!-- others... -->
-   <script is:inline src={`${import.meta.env.BASE_URL}/toggle-theme.js`}></script>
+   <script is:inline src={`${import.meta.env.BASE_URL}/toggle-theme.js`}
+   ></script>
 
    <!-- [!code highlight:4] -->
    <link
@@ -85,7 +86,7 @@ In this section, you will find instructions on how to add support for LaTeX in y
 4. As the last step, add a text-color for `katex` in `typography.css`.
 
    ```css file=src/styles/typography.css
-   @plugin '@tailwindcss/typography';
+   @plugin "@tailwindcss/typography";
 
    @layer base {
      /* other classes */
