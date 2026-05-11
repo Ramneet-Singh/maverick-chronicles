@@ -230,6 +230,21 @@ const nextPost =
   }
   addHeadingLinks();
 
+  /** Ensures hash-only links in post content stay on the current post path
+   *  when a base href is present (e.g. footnotes/references). */
+  function fixInPageHashLinks() {
+    const article = document.getElementById("article");
+    if (!article) return;
+
+    const hashLinks = Array.from(article.querySelectorAll('a[href^="#"]'));
+    for (const link of hashLinks) {
+      const hash = link.getAttribute("href");
+      if (!hash) continue;
+      link.setAttribute("href", `${window.location.pathname}${hash}`);
+    }
+  }
+  fixInPageHashLinks();
+
   /** Attaches copy buttons to code blocks in the document,
    * allowing users to copy code easily. */
   function attachCopyButtons() {
