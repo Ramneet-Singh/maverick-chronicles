@@ -73,7 +73,7 @@ You can add references with footnotes enabled by GFM.[^katex]
 
 - Use deployed site paths for files that live under `public/`, because those files are served directly by Astro. In this repo, write them with the site base prefix, for example `/maverick-chronicles/blog-photo.jpg` or `/maverick-chronicles/interactive/hello-interactive.html`.
 - Do **not** use local source paths like `src/data/...` as site links; those files are not publicly served in the built site.
-- If you want readers to open a source file from the repository, link to the GitHub file URL instead, for example:
+- If you want readers to open a source file from the repository, link to the GitHub file URL on the source branch instead (`gh-pages` in this repo), for example:
 
   ```md
   [tutorial source](https://github.com/Ramneet-Singh/maverick-chronicles/blob/gh-pages/src/data/blog/blog-authoring-tutorial.md)
