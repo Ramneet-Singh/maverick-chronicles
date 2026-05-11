@@ -59,7 +59,7 @@ Inline code also works, like `npm run dev`.
 
 Add images with Markdown:
 
-![AstroPaper OG image example](/maverick-chronicles/astropaper-og.jpg)
+![Site OG image example](/maverick-chronicles/blog-photo.jpg)
 
 ## 5) Quotes, links, and references
 
@@ -68,6 +68,16 @@ Add images with Markdown:
 You can add references with footnotes enabled by GFM.[^katex]
 
 [^katex]: KaTeX project site: <https://katex.org/>.
+
+### Linking to files in this repository
+
+- Use deployed site paths for files that live under `public/`, because those files are served directly by Astro. In this repo, write them with the site base prefix, for example `/maverick-chronicles/blog-photo.jpg` or `/maverick-chronicles/interactive/hello-interactive.html`.
+- Do **not** use local source paths like `src/data/...` as site links; those files are not publicly served in the built site.
+- If you want readers to open a source file from the repository, link to the GitHub file URL instead, for example:
+
+  ```md
+  [tutorial source](https://github.com/Ramneet-Singh/maverick-chronicles/blob/gh-pages/src/data/blog/blog-authoring-tutorial.md)
+  ```
 
 ## 6) Standalone interactive HTML + JavaScript
 
