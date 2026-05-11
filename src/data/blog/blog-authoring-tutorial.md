@@ -96,7 +96,7 @@ Embed it inside a blog post:
 1. Export a notebook to Markdown:
 
    ```bash
-   marimo export md notebooks/analysis.py -o src/data/blog/analysis.md
+   marimo export md path/to/notebook.py -o src/data/blog/notebook-post.md
    ```
 
 2. Ensure the exported file starts with required frontmatter keys:

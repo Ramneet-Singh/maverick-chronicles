@@ -105,7 +105,7 @@ Standalone interactive pages:
 marimo notebook export:
 
 ```bash
-marimo export md notebooks/analysis.py -o src/data/blog/analysis.md
+marimo export md path/to/notebook.py -o src/data/blog/notebook-post.md
 ```
 
 ## 💻 Tech Stack
