@@ -23,8 +23,14 @@
     ul,
     figcaption,
     table,
-    code {
+    code,
+    .katex-display,
+    .katex {
       @apply text-foreground;
+    }
+
+    .katex-display {
+      @apply overflow-x-auto overflow-y-hidden py-1;
     }
 
     a {

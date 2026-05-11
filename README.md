@@ -22,6 +22,7 @@ Read [the blog posts](https://astro-paper.pages.dev/posts/) or check [the README
 - [x] fuzzy search
 - [x] draft posts & pagination
 - [x] sitemap & rss feed
+- [x] KaTeX math in Markdown (inline + block)
 - [x] followed best practices
 - [x] highly customizable
 - [x] dynamic OG image generation for blog posts [#15](https://github.com/satnaing/astro-paper/pull/15) ([Blog Post](https://astro-paper.pages.dev/posts/dynamic-og-image-generation-in-astropaper-blog-posts/))
@@ -75,12 +76,37 @@ All blog posts are stored in `src/data/blog` directory.
 
 ## 📖 Documentation
 
-Documentation can be read in two formats\_ _markdown_ & _blog post_.
+Documentation for rich blog authoring is available here:
 
-- Configuration - [markdown](src/data/blog/how-to-configure-astropaper-theme.md) | [blog post](https://astro-paper.pages.dev/posts/how-to-configure-astropaper-theme/)
-- Add Posts - [markdown](src/data/blog/adding-new-post.md) | [blog post](https://astro-paper.pages.dev/posts/adding-new-posts-in-astropaper-theme/)
-- Customize Color Schemes - [markdown](src/data/blog/customizing-astropaper-theme-color-schemes.md) | [blog post](https://astro-paper.pages.dev/posts/customizing-astropaper-theme-color-schemes/)
-- Predefined Color Schemes - [markdown](src/data/blog/predefined-color-schemes.md) | [blog post](https://astro-paper.pages.dev/posts/predefined-color-schemes/)
+- [Blog authoring tutorial (markdown source)](src/data/blog/blog-authoring-tutorial.md)
+
+This tutorial includes:
+
+- KaTeX math in Markdown (`$...$` and `$$...$$`)
+- fenced code blocks with syntax highlighting
+- images, blockquotes, links, and references/footnotes
+- standalone interactive HTML+JS files from `public/interactive`
+- marimo notebook to Markdown blog workflow
+
+### Quick examples
+
+Run locally:
+
+```bash
+npm run dev
+```
+
+Standalone interactive pages:
+
+- create files in `public/interactive/*.html`
+- open directly at `/interactive/<file>.html`
+- embed in a blog post with `<iframe src="/interactive/<file>.html"></iframe>`
+
+marimo notebook export:
+
+```bash
+marimo export md notebooks/analysis.py -o src/data/blog/analysis.md
+```
 
 ## 💻 Tech Stack
 
