@@ -238,7 +238,7 @@ const nextPost =
 
     const hashLinks = Array.from(article.querySelectorAll('a[href^="#"]'));
     for (const link of hashLinks) {
-      const hash = link.getAttribute("href") ?? "#";
+      const hash = link.getAttribute("href");
       if (hash === "#") continue;
       link.setAttribute("href", `${window.location.pathname}${hash}`);
     }
