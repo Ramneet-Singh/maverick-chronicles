@@ -30,31 +30,27 @@ const {
     >
       <slot />
     </span>
+  ) : newTab ? (
+    <a
+      id={id}
+      {href}
+      class:list={["group inline-block hover:text-accent", className]}
+      aria-label={ariaLabel}
+      title={title}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <slot />
+    </a>
   ) : (
-    newTab ? (
-      <a
-        id={id}
-        {href}
-        class:list={["group inline-block hover:text-accent", className]}
-        aria-label={ariaLabel}
-        title={title}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <slot />
-      </a>
-
-    ) :
-    (
-      <a
-        id={id}
-        {href}
-        class:list={["group inline-block hover:text-accent", className]}
-        aria-label={ariaLabel}
-        title={title}
-      >
-        <slot />
-      </a>
-    )
+    <a
+      id={id}
+      {href}
+      class:list={["group inline-block hover:text-accent", className]}
+      aria-label={ariaLabel}
+      title={title}
+    >
+      <slot />
+    </a>
   )
 }

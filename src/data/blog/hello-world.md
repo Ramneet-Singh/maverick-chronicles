@@ -8,7 +8,7 @@ slug: "hello_world"
 featured: false
 draft: true
 tags:
-    - tag1
+  - tag1
 ---
 
 Hello, world!
