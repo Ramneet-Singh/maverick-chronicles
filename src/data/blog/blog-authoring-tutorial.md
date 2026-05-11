@@ -59,7 +59,7 @@ Inline code also works, like `npm run dev`.
 
 Add images with Markdown:
 
-![AstroPaper OG image example](/astropaper-og.jpg)
+![AstroPaper OG image example](/maverick-chronicles/astropaper-og.jpg)
 
 ## 5) Quotes, links, and references
 
@@ -79,12 +79,12 @@ Example file in this repo:
 
 Direct link:
 
-- [/interactive/hello-interactive.html](/interactive/hello-interactive.html)
+- [/interactive/hello-interactive.html](/maverick-chronicles/interactive/hello-interactive.html)
 
 Embed it inside a blog post:
 
 <iframe
-  src="/interactive/hello-interactive.html"
+  src="/maverick-chronicles/interactive/hello-interactive.html"
   title="Interactive math demo"
   width="100%"
   height="360"
